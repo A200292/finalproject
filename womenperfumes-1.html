@@ -13,9 +13,11 @@
               <div class="div2">
                 <br><br>
                   
-                <button id="b1" type="button" onclick="">LOGIN/SIGNUP</button>
-                <button id="b1"  type="button" onclick="">ADDTOCARD</button>
-              </div>
+                
+                <script src="script.js">
+                </script>
+                
+              </div><br><br>
               <br><br>
               <br>
               <br><br><div class="wrap">
@@ -43,56 +45,59 @@
                       
                   <a href="C:\Users\user\Desktop\FinalProject_html\benifets.html">
                       <button id="b2" type="button">BENIFETS OF PERFUMES</button></a>
-                  <button id="b2" type="button">YOUR FEEDBACK</button>
+                      <a href="C:\Users\user\Desktop\FinalProject_html\f.html">
+                  <button id="b2" type="button">YOUR FEEDBACK</button></a>
               </div>
-  
+             
     <div class="row">
-        <div class="column">
+        <div class="column" data-name="Victoria Secret Bombshell" data-price="25">
             <img src="C:\Users\user\Desktop\FinalProject_html\images\download (1).jpg">
             <h4>
               Victoria Secret Bombshell
               <h4>
-              Original Price $25</h4>                  
-              <button id="b1"  type="button" onclick="">ADDTOCARD</button>
+              Original Price </h4> 
+              <p class="price" style="color: black;">$25</p>                 
+              <button id="b1"  type="button" onclick="addToCart(this)">ADDTOCARD</button>
                 </h4>
         </div>
-        <div class="column">
+        <div class="column" data-name="Dolci and Gabana" data-price="107">
             <img src="C:\Users\user\Desktop\FinalProject_html\images\download (2).jpg">
             <h4>
                 Dolci and Gabana
-               <h4> The One Men Eau de Parfum</h4>
-                 <h4>$107.00</h4> 
-                 <button id="b1"  type="button" onclick="">ADDTOCARD</button>
+               <h4> The One Eau de Parfum</h4>
+               <p class="price" style="color: black;">$107.00</p>                   
+                
+                 <button id="b1"  type="button" class="add-to-cart" onclick="addToCart(this)">ADDTOCARD</button>
            
         </div>
         <div class="row">
-        <div class="column">
+        <div class="column" data-name="CHANEL N°5" data-price="110.00">
             <img    src="C:\Users\user\Desktop\FinalProject_html\images\download.jpg">
             <h4>
               CHANEL N°5  
              <h4> Eau de Parfum Spray</h4>
-               <h4> $110:00</h4> 
-               <button id="b1"  type="button" onclick="">ADDTOCARD</button>
+             <p class="price" style="color: black;">$110:00</p> 
+               <button id="b1"  type="button" onclick="addToCart(this)">ADDTOCARD</button>
           </div>
         <div>
-            <div class="column">
+            <div class="column" data-name="Hypnotic Poison EDP · DIOR" data-price="191.00">
                 <img  src="C:\Users\user\Desktop\FinalProject_html\images\images (1).jpg">
                 <h4>
                   Hypnotic Poison EDP · DIOR
                 </h4>
-                <h4>$191.00</h4>
-                <button id="b1"  type="button" onclick="">ADDTOCARD</button>
+                <p style="color: black;">$191.00</p>
+                <button id="b1"  type="button" onclick="addToCart(this)">ADDTOCARD</button>
         </div>
-        <div class="row">
+        <div class="row" data-name="DIORMiss Dior" data-price="172.0">
           
               <img    src="C:\Users\user\Desktop\FinalProject_html\images\images (2).jpg">
               <h4>
                 DIORMiss Dior   
-               <h4> Eau de Parfum Spray
-                  $172.00</h4> 
-                  <button id="b1"  type="button" onclick="">ADDTOCARD</button>
+               <h4> Eau de Parfum Spray</h4>
+               <p class="price" style="color: black;"> $172.0 </p>
+                  <button id="b1"  type="button" onclick="addToCart(this)">ADDTOCARD</button>
             </div>
-        
+            
       </div>
     </body>
 </html>

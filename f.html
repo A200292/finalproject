@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" width="width=devicewidth,initial scale=1.0">
+    <title>your feedback</title>
+    <head>
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <form>
+        <div>
+            <img src="C:\Users\user\Desktop\FinalProject_html\images\logo.png" alt="its a perfume logo" width="350px" height="280px" style="float: left"></div>
+            <div class="div2">
+              <br><br>
+                
+             
+            </div>
+            <br><br>
+            <br>
+            <br><br><div class="wrap">
+              <div class="search">
+                 <input type="text" class="searchTerm" placeholder="search...">
+                 <button type="submit" class="searchButton" style="background-color: #b485a4; border-radius:40px ;">
+                  Search
+                </button><br><br><br>
+              </div>
+            <br>
+            <br><br>
+            <div class="div3" style="background: #c72c93; border-radius: 20px;">
+               <a href="C:\Users\user\Desktop\FinalProject_html\homepage.html">
+                                <button id="b2" type="button">HOMEHOME</button></a>
+                <a href="C:\Users\user\Desktop\FinalProject_html\womenperfumes-1.html">
+                <button id="b2" type="button">WOMEN PERFUMES</button></a>
+                <a href="C:\Users\user\Desktop\FinalProject_html\bodysplash.html">
+                <button  id="b2" type="button">BODY SPLASH</button></a>
+                <a href="C:\Users\user\Desktop\FinalProject_html\bodylotion.html">
+                  <button id="b2" type="button">BODY LOTION</button></a>
+                  
+         <a href="C:\Users\user\Desktop\FinalProject_html\benifets.html">
+                    <button id="b2" type="button">BENIFETS OF PERFUMES</button></a>
+                    <a href="C:\Users\user\Desktop\FinalProject_html\f.html">
+                    <button id="b2" type="button">YOUR FEEDBACK</button></a>
+            </div>
+             <div>
+              <form id="feedbackForm">
+                <h1>Enter your feedback here:</h1><br>
+                
+                
+                <textarea id="textInput" name="feedback" rows="10" cols="70"></textarea><br><br>
+        
+                <button type="submit" style="margin-left: 350px; padding: 30px; display: inline-block;">SUBMIT</button>
+            </form>
+        
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                  console.log("DOM fully loaded!");
+      
+                  const feedbackForm = document.getElementById('feedbackForm');
+      
+                  console.log("Form found:", feedbackForm); // Debugging
+      
+                  if (feedbackForm) {
+                      feedbackForm.addEventListener('submit', function(event) {
+                          event.preventDefault();
+      
+                          const formData = new FormData(event.target);
+                          const formObject = Object.fromEntries(formData.entries());
+                          const jsonString = JSON.stringify(formObject, null, 2);
+      
+                          const blob = new Blob([jsonString], { type: 'application/json' });
+                          const url = URL.createObjectURL(blob);
+      
+                          const a = document.createElement('a');
+                          a.href = url;
+                          a.download = 'feedback.json';
+                          document.body.appendChild(a);
+                          a.click();
+                          document.body.removeChild(a);
+      
+                          URL.revokeObjectURL(url);
+                      });
+                  } else {
+                      console.error("Feedback form not found! Make sure the form exists in the HTML.");
+                  }
+              });
+          </script>
+        </html>

@@ -132,3 +132,28 @@ a {
 a:hover {
   text-decoration: underline;
 }
+#textInput
+ {
+  margin: 0px 100px 0px 100px;
+  background: #640254;
+  font-size: medium;
+  color: #f7eff4;
+  font-style: italic;
+  align-self: center;
+padding: 100px;
+border-radius: 70px;
+ }
+h1{
+  padding-left:100px ;
+  color: #ca639f;
+  font-style: italic;
+ }
+ #cart
+
+ {
+  
+  color: #ee0799;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 100px;
+  margin: 100px;
+ }

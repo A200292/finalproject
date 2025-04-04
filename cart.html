@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" width="width=devicewidth,initial scale=1.0">
+    <title>your cart</title>
+    <head>
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <form>
+        <script src="script.js"></script>
+        
+        <div id="cart"><h1>Your Cart</h1>
+            <div> <h4 style="justify-self: center; font-family:Verdana, 
+                Geneva, Tahoma, sans-serif; size:100px; color:  rgb(247, 47, 187); font-style:italic ;" id="totalCartPrice">Total Cart Price: $0.00</h4></div>
+             
+            <button onclick="clearCart()">Clear Cart</button>
+
+        <script>
+            
+        // Function to display the cart contents
+        document.addEventListener("DOMContentLoaded", function() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let cartDiv = document.getElementById("cart");
+
+            if (cart.length === 0) {
+                cartDiv.innerHTML = "<h2>No items in cart</h2>";
+                return;
+            }
+
+            cart.forEach(item => {
+                let itemElement = document.createElement("div");
+                itemElement.innerHTML = `
+                    <p>Name: ${item.name}</p>
+                    <p>Price: $${item.price}</p>
+                    <p>Quantity: ${item.quantity}</p>
+                    <p>Total Price: $${item.totalprice}</p>
+                    <hr>
+                `;
+                cartDiv.appendChild(itemElement);
+            });
+
+            // Call function to update the total price on page load
+            updateTotalCartPrice();
+        });
+            function clearCart() {
+                localStorage.removeItem("cart");
+                location.reload();
+            }
+        </script>
+    
+
+          
+        </div>
+        
+    </body></html>
